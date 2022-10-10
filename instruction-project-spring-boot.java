@@ -308,7 +308,7 @@
 						Hearders
 							Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY2NTEzMjE0OX0.9DZ16_wtdBQ1JX4sQ0WE3uthYcsjR-27koaHoSDWsb6UNt_6H_wpUr5XFM5Uznc4nzQ9izYDiTwgH56o7S9KIg
 				
-38 - ]
+8 - ]
 	Validando formulário de login
 		atualizar app.component.html
 		form class="form mt-4" style="width: 23rem" class="was-validated">
@@ -328,9 +328,9 @@
              </div>
 		/*https://projetojavaweb.com/certificado-aluno/plataforma-curso/aulaatual/a57189a7-cf34-48cd-824d-22d44ecede96/idcurso/1/idvideoaula/807*/
 		
-39 - ]
+9 - ]
 	Criando Routers [Rotas] para a nossa Home
-			39.1 - CRIAR COMPONENTE home
+			9.1 - CRIAR COMPONENTE home
 		Executar
 		#ng g c home 
 			CREATE src/app/home/home.component.html (19 bytes)
@@ -339,7 +339,7 @@
 			CREATE src/app/home/home.component.css (0 bytes)
 			UPDATE src/app/app.module.ts (556 bytes)
 			
-			39.2 - Mapeamento do componente criado 
+			9.2 - Mapeamento do componente criado 
 				em app.module.ts	
 					atualizar
 					import { RouterModule, Routes } from '@angular/router';
@@ -375,7 +375,7 @@
 						  providers?: Provider[];
 					  }
 					  
-				39.3 - Redirecioanr para o Home
+			9.3 - Redirecioanr para o Home
 					em login.service.service	
 						declarar o Router
 							import { Router } from '@angular/router';
@@ -386,10 +386,10 @@
 							 /*navegação para onde vai depois de autenticar */
 							this.router.navigate(['home']);
 				
-				39.4 - Adicionar no app.componet.html o element <router-outlet>
+			9.4 - Adicionar no app.componet.html o element <router-outlet>
 							 <router-outlet></router-outlet>
 							 
-				39.5 - Criar component de login, separando os componentes
+			9.5 - Criar component de login, separando os componentes
 					 executar
 					 #ng g c login 
 						CREATE src/app/login/login.component.html (20 bytes)
@@ -398,7 +398,7 @@
 						CREATE src/app/login/login.component.css (0 bytes)
 						UPDATE src/app/app.module.ts (1504 bytes)
 					
-					39.5.1 - 
+				9.5.1 - 
 						- recortar todo o html do app.componet e deixar apenas o element <router-outlet>
 						
 						- colar em login.component.html
@@ -424,6 +424,143 @@
 								path : 'login', component : LoginComponent
 							  }
 							
+10 - Criando a Barra do Menu
+		atualizar
+			app.component.html
+				<ul class="nav nav-tabs">
+				  <li class="nav-item">
+					<a class="nav-link active" [routerLink]="['/home']" routerLinkActive="router-link-active" >Home</a>
+				  </li>
+				  <li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Action</a>
+					<div class="dropdown-menu">
+					  <a class="dropdown-item" href="#">Link 1</a>
+					  <a class="dropdown-item" href="#">Link 2</a>
+					  <a class="dropdown-item" href="#">Link 3</a>
+					</div>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link" (click)="sair()">Exit</a>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link disabled" href="#">Disabled</a>
+				  </li>
+				</ul>
+				<router-outlet></router-outlet>
+	
+		 app.component.ts
+		 adicionar abaixo do Constructor
+			 constructor(private router: Router) {
+			}
+			  /*se ao iniciar o sistema não tiver token vai para o login */
+			  ngOnInit(): void {
+				if (localStorage.getItem('token') == null) {
+				  this.router.navigate(['login']);
+				}
+			  }
+			  /*clicar em sair limpa token e  volta para login */
+			  public sair(){
+				localStorage.clear();
+				this.router.navigate(['login']);
+			  }
+			}
+
+11 - ]
+	Criando um Interceptor
+			executar	
+			#ng g s HeaderInterceptor 
+				CREATE src/app/service/header-interceptor.service.spec.ts (413 bytes)        
+				CREATE src/app/service/header-interceptor.service.ts (146 bytes)
+					
+					atualizar
+						import {
+						  HttpErrorResponse,
+						  HttpEvent,
+						  HttpHandler,
+						  HttpInterceptor,
+						  HttpRequest,
+						  HttpResponse,
+						  HTTP_INTERCEPTORS,
+						} from '@angular/common/http';
+						import { Injectable, NgModule } from '@angular/core';
+						import { throwError, Observable } from 'rxjs';
+						import { catchError, tap } from 'rxjs/operators';
+
+						@Injectable()
+
+						/*toda requisição essa classe sera chamada para colocar o token no backend*/
+						export class HeaderInterceptorService implements HttpInterceptor {
+						  /*metodo criado conformde segustão da IDE*/
+						  intercept(
+							req: HttpRequest<any>,
+							next: HttpHandler
+						  ): Observable<HttpEvent<any>> {
+							/*se token é diferente de null então criar */
+							if (localStorage.getItem('token') !== null) {
+							  const token = 'Bearer ' + localStorage.getItem('token');
+							  /*sobrescrevendo a parte da requisição e vai passar a requisição pelo cabeçalho*/
+							  const tokenRequest = req.clone({
+								headers: req.headers.set('Authorization', token)
+							  });
+							  /*continuar "next" e passar a requisição com o tokenRequest*/
+							  return next.handle(tokenRequest).pipe(
+								tap((event: HttpEvent<any>) => {
+								  if (
+									event instanceof HttpResponse &&
+									(event.status === 200 || event.status === 201)
+								  ) {
+									console.info('Sucesso na Operação');
+								  }
+								}),
+								catchError(this.processaError)
+							  );
+							} else {
+							  /*senão tem token passa requisição original */
+							  return next.handle(req).pipe(catchError(this.processaError));
+							}
+						  }
+						  constructor() {}
+
+						  processaError(error: HttpErrorResponse) {
+							let errorMessage = 'Erro desconhecido';
+							if (error.error instanceof ErrorEvent) {
+							  console.error(error.error);
+							  errorMessage = 'Error: ' + error.error.error;
+							} else {
+							  errorMessage =
+								'Código: ' + error.error.code + '\nMensagem: ' + error.error.error;
+							}
+							window.alert(errorMessage);
+							return throwError(errorMessage);
+						  }
+						}
+
+						/*transfomando em um modulo essa requisição */
+						@NgModule({
+						  providers: [
+							{
+							  provide: HTTP_INTERCEPTORS,
+							  useClass: HeaderInterceptorService,
+							  multi: true,
+							},
+						  ],
+						})
+						/*exportando essa classe em um modulo*/
+						export class HttpInterceptorModule {}
+
+					11.1 - ]
+						impotar
+						import { HttpInterceptorModule } from './service/header-interceptor.service'
 						
+							HttpInterceptorModule
+							
+12 - ]
+	Class Model e Service do Usuário
+		executar	
+			#ng g s userService        
+				CREATE src/app/service/user-service.service.spec.ts (383 bytes)
+				CREATE src/app/service/user-service.service.ts (140 bytes)
+				
+	
 						
 					

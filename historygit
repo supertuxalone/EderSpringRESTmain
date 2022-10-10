@@ -1,0 +1,500 @@
+   38  ls
+   39  npm start
+   40  npm start
+   41  npm start
+   42  npm start
+   43  [A
+   44  npm start
+   45  npm start
+   46  cd ..
+   47  cd ..
+   48  cd..
+   49  cd Desafio-ford-angular/api
+   50  ls
+   51  npm start
+   52  npm start
+   53  npm start
+   54  npm start
+   55  npm start
+   56  npm start
+   57  npm start
+   58  cd ..
+   59  cd Desafio-Eder-angular/
+   60  npm start
+   61  cd ..
+   62  cd ..
+   63  cd alura_angular_rxjs_1-master/byte-bank-broker/
+   64  npm start
+   65  npm start
+   66  npm start
+   67  d ..
+   68  cd ..
+   69  cd ..
+   70  cd Desafio-ford-angular/Desafio-Eder-angular/
+   71  npm start
+   72  npm start
+   73  npm start
+   74  npm i
+   75  npm start
+   76  npm i
+   77  npm start
+   78  npm start
+   79  npm uninstall sqlite3
+   80  npm cache clean --force
+   81  npm install sqlite3
+   82  npm i express
+   83  npm start
+   84  cd ..
+   85  cd ..
+   86  cd
+   87  npm start
+   88  cd ..
+   89  cd alura_angular_rxjs_1-master/byte-bank-broker/
+   90  npm start
+   91  npm start
+   92  npm i
+   93  npm start
+   94  npm i
+   95  npm start
+   96  npm start
+   97  npm start
+   98  npm start
+   99  npm i
+  100  ./mvnw spring-boot:tun
+  101  ./mvnw spring-boot:run
+  102  ./mvnw spring-boot:run
+  103  mvn package
+  104  mvn package
+  105  mvn
+  106  mvn -x
+  107  mvn -update]
+  108  mvn -update
+  109  mvn -v
+  110  mvn -e
+  111  mvn -X
+  112  #!/bin/sh
+  113  # Licensed to the Apache Software Foundation (ASF) under one or more
+  114  # contributor license agreements.  See the NOTICE file distributed with
+  115  # this work for additional information regarding copyright ownership.
+  116  # The ASF licenses this file to You under the Apache License, Version 2.0
+  117  # (the "License"); you may not use this file except in compliance with
+  118  # the License.  You may obtain a copy of the License at
+  119  #
+  120  #     http://www.apache.org/licenses/LICENSE-2.0
+  121  #
+  122  # Unless required by applicable law or agreed to in writing, software
+  123  # distributed under the License is distributed on an "AS IS" BASIS,
+  124  # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  125  # See the License for the specific language governing permissions and
+  126  # limitations under the License.
+  127  # -----------------------------------------------------------------------------
+  128  # Start Script for the CATALINA Server
+  129  # -----------------------------------------------------------------------------
+  130  # Better OS/400 detection: see Bugzilla 31132
+  131  os400=false
+  132  case "`uname`" in OS400*) os400=true;; esac
+  133  # resolve links - $0 may be a softlink
+  134  PRG="$0"
+  135  while [ -h "$PRG" ] ; do   ls=`ls -ld "$PRG"`;   link=`expr "$ls" : '.*-> \(.*\)$'`;   if expr "$link" : '/.*' > /dev/null; then     PRG="$link";   else     PRG=`dirname "$PRG"`/"$link";   fi; done
+  136  PRGDIR=`dirname "$PRG"`
+  137  EXECUTABLE=catalina.sh
+  138  # Check that target executable exists
+  139  if $os400; then   eval; else   if [ ! -x "$PRGDIR"/"$EXECUTABLE" ]; then     echo "Cannot find $PRGDIR/$EXECUTABLE";     echo "The file is absent or does not have execute permission";     echo "This file is needed to run this program";     exit 1;   fi; fi
+  140  exec "$PRGDIR"/"$EXECUTABLE" start "$@"
+  141  #!/bin/sh
+  142  # Licensed to the Apache Software Foundation (ASF) under one or more
+  143  # contributor license agreements.  See the NOTICE file distributed with
+  144  # this work for additional information regarding copyright ownership.
+  145  # The ASF licenses this file to You under the Apache License, Version 2.0
+  146  # (the "License"); you may not use this file except in compliance with
+  147  # the License.  You may obtain a copy of the License at
+  148  #
+  149  #     http://www.apache.org/licenses/LICENSE-2.0
+  150  #
+  151  # Unless required by applicable law or agreed to in writing, software
+  152  # distributed under the License is distributed on an "AS IS" BASIS,
+  153  # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  154  # See the License for the specific language governing permissions and
+  155  # limitations under the License.
+  156  # -----------------------------------------------------------------------------
+  157  # Start Script for the CATALINA Server
+  158  # -----------------------------------------------------------------------------
+  159  # Better OS/400 detection: see Bugzilla 31132
+  160  os400=false
+  161  case "`uname`" in OS400*) os400=true;; esac
+  162  # resolve links - $0 may be a softlink
+  163  PRG="$0"
+  164  while [ -h "$PRG" ] ; do   ls=`ls -ld "$PRG"`;   link=`expr "$ls" : '.*-> \(.*\)$'`;   if expr "$link" : '/.*' > /dev/null; then     PRG="$link";   else     PRG=`dirname "$PRG"`/"$link";   fi; done
+  165  PRGDIR=`dirname "$PRG"`
+  166  EXECUTABLE=catalina.sh
+  167  # Check that target executable exists
+  168  if $os400; then   eval; else   if [ ! -x "$PRGDIR"/"$EXECUTABLE" ]; then     echo "Cannot find $PRGDIR/$EXECUTABLE";     echo "The file is absent or does not have execute permission";     echo "This file is needed to run this program";     exit 1;   fi; fi
+  169  exec "$PRGDIR"/"$EXECUTABLE" start "$@"
+  170  #!/bin/sh
+  171  # Licensed to the Apache Software Foundation (ASF) under one or more
+  172  # contributor license agreements.  See the NOTICE file distributed with
+  173  # this work for additional information regarding copyright ownership.
+  174  # The ASF licenses this file to You under the Apache License, Version 2.0
+  175  # (the "License"); you may not use this file except in compliance with
+  176  # the License.  You may obtain a copy of the License at
+  177  #
+  178  #     http://www.apache.org/licenses/LICENSE-2.0
+  179  #
+  180  # Unless required by applicable law or agreed to in writing, software
+  181  # distributed under the License is distributed on an "AS IS" BASIS,
+  182  # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  183  # See the License for the specific language governing permissions and
+  184  # limitations under the License.
+  185  # -----------------------------------------------------------------------------
+  186  # Start Script for the CATALINA Server
+  187  # -----------------------------------------------------------------------------
+  188  # Better OS/400 detection: see Bugzilla 31132
+  189  os400=false
+  190  case "`uname`" in OS400*) os400=true;; esac
+  191  # resolve links - $0 may be a softlink
+  192  PRG="$0"
+  193  while [ -h "$PRG" ] ; do   ls=`ls -ld "$PRG"`;   link=`expr "$ls" : '.*-> \(.*\)$'`;   if expr "$link" : '/.*' > /dev/null; then     PRG="$link";   else     PRG=`dirname "$PRG"`/"$link";   fi; done
+  194  PRGDIR=`dirname "$PRG"`
+  195  EXECUTABLE=catalina.sh
+  196  # Check that target executable exists
+  197  if $os400; then   eval; else   if [ ! -x "$PRGDIR"/"$EXECUTABLE" ]; then     echo "Cannot find $PRGDIR/$EXECUTABLE";     echo "The file is absent or does not have execute permission";     echo "This file is needed to run this program";     exit 1;   fi; fi
+  198  exec "$PRGDIR"/"$EXECUTABLE" start "$@"
+  199  #!/bin/sh
+  200  # Licensed to the Apache Software Foundation (ASF) under one or more
+  201  # contributor license agreements.  See the NOTICE file distributed with
+  202  # this work for additional information regarding copyright ownership.
+  203  # The ASF licenses this file to You under the Apache License, Version 2.0
+  204  # (the "License"); you may not use this file except in compliance with
+  205  # the License.  You may obtain a copy of the License at
+  206  #
+  207  #     http://www.apache.org/licenses/LICENSE-2.0
+  208  #
+  209  # Unless required by applicable law or agreed to in writing, software
+  210  # distributed under the License is distributed on an "AS IS" BASIS,
+  211  # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  212  # See the License for the specific language governing permissions and
+  213  # limitations under the License.
+  214  # -----------------------------------------------------------------------------
+  215  # Stop script for the CATALINA Server
+  216  # -----------------------------------------------------------------------------
+  217  # Better OS/400 detection: see Bugzilla 31132
+  218  os400=false
+  219  case "`uname`" in OS400*) os400=true;; esac
+  220  # resolve links - $0 may be a softlink
+  221  PRG="$0"
+  222  while [ -h "$PRG" ] ; do   ls=`ls -ld "$PRG"`;   link=`expr "$ls" : '.*-> \(.*\)$'`;   if expr "$link" : '/.*' > /dev/null; then     PRG="$link";   else     PRG=`dirname "$PRG"`/"$link";   fi; done
+  223  PRGDIR=`dirname "$PRG"`
+  224  EXECUTABLE=catalina.sh
+  225  # Check that target executable exists
+  226  if $os400; then   eval; else   if [ ! -x "$PRGDIR"/"$EXECUTABLE" ]; then     echo "Cannot find $PRGDIR/$EXECUTABLE";     echo "The file is absent or does not have execute permission";     echo "This file is needed to run this program";     exit 1;   fi; fi
+  227  exec "$PRGDIR"/"$EXECUTABLE" stop "$@"
+  228  #!/bin/sh
+  229  # Licensed to the Apache Software Foundation (ASF) under one or more
+  230  # contributor license agreements.  See the NOTICE file distributed with
+  231  # this work for additional information regarding copyright ownership.
+  232  # The ASF licenses this file to You under the Apache License, Version 2.0
+  233  # (the "License"); you may not use this file except in compliance with
+  234  # the License.  You may obtain a copy of the License at
+  235  #
+  236  #     http://www.apache.org/licenses/LICENSE-2.0
+  237  #
+  238  # Unless required by applicable law or agreed to in writing, software
+  239  # distributed under the License is distributed on an "AS IS" BASIS,
+  240  # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  241  # See the License for the specific language governing permissions and
+  242  # limitations under the License.
+  243  # -----------------------------------------------------------------------------
+  244  # Stop script for the CATALINA Server
+  245  # -----------------------------------------------------------------------------
+  246  # Better OS/400 detection: see Bugzilla 31132
+  247  os400=false
+  248  case "`uname`" in OS400*) os400=true;; esac
+  249  # resolve links - $0 may be a softlink
+  250  PRG="$0"
+  251  while [ -h "$PRG" ] ; do   ls=`ls -ld "$PRG"`;   link=`expr "$ls" : '.*-> \(.*\)$'`;   if expr "$link" : '/.*' > /dev/null; then     PRG="$link";   else     PRG=`dirname "$PRG"`/"$link";   fi; done
+  252  PRGDIR=`dirname "$PRG"`
+  253  EXECUTABLE=catalina.sh
+  254  # Check that target executable exists
+  255  if $os400; then   eval; else   if [ ! -x "$PRGDIR"/"$EXECUTABLE" ]; then     echo "Cannot find $PRGDIR/$EXECUTABLE";     echo "The file is absent or does not have execute permission";     echo "This file is needed to run this program";     exit 1;   fi; fi
+  256  exec "$PRGDIR"/"$EXECUTABLE" stop "$@"
+  257  ls
+  258  cd target/
+  259  java -jar ProjetoSpring-0.0.1-SNAPSHOT.jar
+  260  git init
+  261  git add springProjectRestAPI.war
+  262  git status
+  263  git branch -b main
+  264  git branch -a main
+  265  git checkout -b main
+  266  git commit -a -m "Commitando API war"
+  267  git push https://github.com/supertuxalone/API-springProjectRestAPI.git -f main
+  268  git push https://github.com/supertuxalone/API-springProjectRestAPI.git -f main
+  269  git push https://github.com/supertuxalone/API-springProjectRestAPI.git -f main
+  270  cd ..
+  271  ls
+  272  git init
+  273  git add .
+  274  git status
+  275  git checkout -b main
+  276  git commit -a -m "Comitando Projeto sem WAR/JAR"
+  277  git push https://github.com/supertuxalone/EderSpringRESTAPI.git -f main
+  278  git status
+  279  git add .
+  280  git commit -a -m "Update Application.prop"
+  281  git push https://github.com/supertuxalone/EderSpringRESTAPI.git -f main
+  282  git status
+  283  git add .
+  284  git commit -a -m "Update target"
+  285  git push https://github.com/supertuxalone/EderSpringRESTAPI.git -f main
+  286  git status
+  287  git add .
+  288  git commit -a -m "Comitando projeto de ate 24 Implementando o cache para performance"
+  289  git push https://github.com/supertuxalone/EderSpringRESTAPI.git main -f
+  290  git status
+  291  git init
+  292  git status
+  293  git add .
+  294  git checkout -b main
+  295  git status
+  296  git commit -a -m "21.2 - ]
+  297  
+  298  git commit -a -m "21
+  299  git commit -a -m "21.2 JSON Web Token (JWT) - Cadastrando e editando"
+  300  git push https://github.com/supertuxalone/EderSpringRESTAPI.git -f main
+  301  git tag tagv1 -m "Tag Versão 1"
+  302  git tag
+  303  git remote add origin main
+  304  git push tagv1
+  305  git push tagv1 origin
+  306  git push tagv1 main
+  307  git push tagv1 origin
+  308  git remove tagv1
+  309  git tag -d tagv1
+  310  git tag
+  311  git tag
+  312  In order to delete a local Git tag, use the “git tag” command with the “-d” option.
+  313  $ git tag -a tagv1 -m "Tag versão 1"
+  314  git tag -a tagv1 -m "Tag versão 1"
+  315  git push origin tagv1
+  316  git push tagv1
+  317  git push main tagv1
+  318  git tagv1
+  319  git tag
+  320  git remote add origin main
+  321  git push origin tagv1
+  322  git init
+  323  git add .
+  324  git commit -a -m "21.2 JSON Web Token (JWT) - Cadastrando e editando"
+  325  git tag -a tagv1 -m "Tag versão 1"
+  326  git push origin tagv1
+  327  git remote add origin main
+  328  git push origin tagv1
+  329  echo ref: refs/heads/main >.git/HEAD
+  330  git push origin tagv1
+  331  git remote add origin main
+  332  git push origin tagv1
+  333  git tag
+  334  git push tagv1
+  335  git init
+  336  git add .
+  337  git remote add origin main
+  338  git commit -a -m "21.2 JSON Web Token (JWT) - Cadastrando e editando"
+  339  echo ref: refs/heads/main >.git/HEAD
+  340  git tag -a tagv1 -m "Tag versão 1"
+  341  git init
+  342  git add .
+  343  git remote add origin main
+  344  git commit -a -m "21.2 JSON Web Token (JWT) - Cadastrando e editando"
+  345  git tag -a tagv1 -m "Tag versão 1"
+  346  git push origin tagv1
+  347  git status
+  348  git remote add origin main
+  349  git init
+  350  git add .
+  351  git checkout -b main
+  352  git remote add origin main
+  353  git commit -a -m "21.2 JSON Web Token (JWT) - Cadastrando e editando"
+  354  git tag -a tagv1 -m "Tag versão 1"
+  355  git push origin tagv1
+  356  echo ref: refs/heads/main >.git/HEAD
+  357  git push origin tagv1
+  358  git init
+  359  git add .
+  360  git checkout -b main
+  361  git remote add origin main
+  362  git commit -a -m "21.2 JSON Web Token (JWT) - Cadastrando e editando"
+  363  echo ref: refs/heads/main >.git/HEAD
+  364  git tag -a tagv1 -m "Tag versão 1"
+  365  git push origin tagv1
+  366  GIT TAG
+  367  git tag
+  368  git push tagv1
+  369  git push tagv1 https://github.com/supertuxalone/EderSpringRESTAPI.git
+  370  git remote -v
+  371  git push origin tagv1
+  372  git init
+  373  git add .
+  374  git remote add origin https://github.com/supertuxalone/EderSpringRESTAPI.git
+  375  git commit -a -m "21.2 JSON Web Token (JWT) - Cadastrando e editando"
+  376  git remote -v
+  377  git tag -a tagv1 -m "Tag versão 1"
+  378  git push origin tagv1
+  379  git pull https://github.com/supertuxalone/EderSpringRESTAPI.git -f main
+  380  git status
+  381  git restore .
+  382  git status
+  383  git status
+  384  git status
+  385  git restore .
+  386  git status
+  387  git status
+  388  git status
+  389  git add .
+  390  git status
+  391  git commit -a -m "22 - Versionamento de API"
+  392  git push https://github.com/supertuxalone/EderSpringRESTAPI.git -f main
+  393  git status
+  394  git checkout -b main
+  395  git push https://github.com/supertuxalone/EderSpringRESTAPI.git -f main
+  396  git status
+  397  git status
+  398  git diff
+  399  git restore
+  400  git status
+  401  git restore .
+  402  git status
+  403  git tag -a tagv2 -m "Tag versão 2"
+  404  git push origin tagv2
+  405  git add .
+  406  git status
+  407  git commit -a -m "26.1 - Autenticação de TOKEN em DB"
+  408  git tag -a tagv2 -m "Tag versão 2"
+  409  git tag -d tagv2
+  410  git tag -a tagv2 -m "Tag versão 2"
+  411  git push origin tagv2
+  412  git push https://github.com/supertuxalone/EderSpringRESTAPI.git -f main
+  413  git add .
+  414  git status
+  415  git commit -a -m "30 - Tratamento de TOKEN expirado"
+  416  git tag -a tagv3 -m "Tag versão 3"
+  417  git push origin tagv3
+  418  git push https://github.com/supertuxalone/EderSpringRESTAPI.git -f main
+  419  git status
+  420  git add .
+  421  git status
+  422  git commit -a -m "32.1 - Teste Unitário"
+  423  git tag -a tagv4 -m "Tag versão 4"
+  424  git push origin tagv4
+  425  git push https://github.com/supertuxalone/EderSpringRESTAPI.git -f main
+  426  git status
+  427  git add .
+  428  git commit -a -m "33.1 - Consumindo de API CEP"
+  429  git tag -a tagv5 -m "Tag versão 5"
+  430  git push origin tagv5
+  431  git push https://github.com/supertuxalone/EderSpringRESTAPI.git -f main
+  432  npm install -g angular-ide
+  433  npm install -g -f angular-ide
+  434  npm install -global angular-ide
+  435  npm update
+  436  npm audit
+  437  npm install -g angular-ide
+  438  ng new EderSpringRESTMain
+  439  cd EderSpringRESTMain/
+  440  ls
+  441  cd src/
+  442  npm i
+  443  npm i
+  444  npm i
+  445  ls
+  446  cd src/
+  447  ls
+  448  npm i
+  449  npm i -f
+  450  npm audit -f
+  451  npm install --save-dev prettier
+  452  npm install --save-dev prettier
+  453  npm install -f
+  454  npm update -f
+  455  npm start
+  456  ng new EderSpringRESTAPIMAIN
+  457  cls
+  458  cls
+  459  git pull https://github.com/supertuxalone/EderSpringRESTAPI.git main -f
+  460  git status
+  461  git restore .
+  462  git status
+  463  cd  target/
+  464  ls
+  465  rm ProjetoSpring-0.0.1-SNAPSHOT.jar.original
+  466  rm ProjetoSpring-0.0.1-SNAPSHOT.war.original
+  467  mvn package -e
+  468  cd..
+  469  cd ..
+  470  ls
+  471  cat pom.xml 
+  472  vi pom.xml 
+  473  cd target/
+  474  ls
+  475  cd ..
+  476  mvn package -e
+  477  cd target/
+  478  java -jar ProjetoSpring-0.0.1-SNAPSHOT.jar
+  479  java -Dserver.port=9000 -jar ProjetoSpring-0.0.1-SNAPSHOT.jar
+  480  npm v
+  481  npm version
+  482  npm -v
+  483  ng -v
+  484  ng version
+  485  node version
+  486  node -v
+  487  npm start
+  488  java -Dserver.port=9000 -jar ProjetoSpring-0.0.1-SNAPSHOT.jar
+  489  java -Dserver.port=9000 -jar ProjetoSpring-0.0.1-SNAPSHOT.jar
+  490  ls
+  491  npm i
+  492  npm update
+  493  npm i
+  494  npm start
+  495  npm version
+  496  npm start
+  497  npm isntall
+  498  npm install
+  499  npm start
+  500  git status
+  501* git 
+  502  git status
+  503  git checkout -b main
+  504  git commit -a -m "Comitando Project Spring Rest APi Main"
+  505  git push https://github.com/supertuxalone/EderSpringRESTmain.git main -f
+  506  git tag -a tagv1 -m "Tag versão 1"
+  507  git push tagv1
+  508  git push origin tagv1
+  509  git status
+  510  git remote add origin main
+  511  git push tagv1
+  512  git add .
+  513  git init
+  514  git add .
+  515  git checkout -b main
+  516  git remote add origin main
+  517  git commit -a -m "Comitando Project Spring Rest APi Main"
+  518  git remote add origin https://github.com/supertuxalone/EderSpringRESTmain.git
+  519  git remote add origin main
+  520  git tag -a tagv1 -m "Tag versão 1"
+  521  git push tagv1
+  522  git push main tagv1
+  523  git push origin tagv1
+  524  echo ref: refs/heads/main >.git/HEAD
+  525  git push origin tagv1
+  526  git init
+  527  git checkout -b main
+  528  git remote add origin main
+  529  git remote add origin https://github.com/supertuxalone/EderSpringRESTmain.git
+  530  git init
+  531  git add .
+  532  git checkout -b main
+  533  git remote add origin https://github.com/supertuxalone/EderSpringRESTmain.git
+  534  git commit -a -m "Comitando Project Spring Rest APi Main"
+  535  git tag -a tagv1 -m "Tag versão 1"
+  536  git push origin tagv1
+  537  history > historygit

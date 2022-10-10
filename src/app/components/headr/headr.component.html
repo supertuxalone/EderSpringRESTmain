@@ -1,0 +1,57 @@
+<header class="sticky-top">
+  <nav class="navbar navbar-light bg-white">
+    <a class="navbar-light">
+
+      <i class="fa fa-bars mr-2" (click)="menu.abreMenu()" (keyup.space)="menu.abreMenu()"></i>
+     Headr the System
+    </a>
+    <app-menu #menu></app-menu>
+    <!-- <app-menu #menu>
+      <ul class="list-unstyled">
+        <li>
+          <a [routerLink]="['home', 'sair']">Novo</a>
+        </li>
+      </ul>
+    </app-menu> -->
+
+    <!-- <div *ngIf="user$ | async as user">
+      <div *ngIf="user.name; else login">
+        <i class="fa fa-user-circle mr-1"> </i>
+        <a class="mr-1">{{ user.name }}</a>
+        <a (click)="logout()">Logout</a>
+      </div>
+    </div> -->
+  </nav>
+  <!-- <ng-template #login>
+    <span class="navbar-text">
+      <a [routerLink]="['']">Login</a>
+    </span>
+  </ng-template> -->
+</header>
+<!-- <div id="page-content-wrapper" >
+  <nav class="navbar navbar-expand-lg navbar-light bg-light" >
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" [routerLink]="['/home']" routerLinkActive="router-link-active" >Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="sair()">Sair</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+           Menu
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Link 1</a>
+            <a class="dropdown-item" href="#">Link 2</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Link 3</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div> -->
+
