@@ -15,21 +15,28 @@ var http_1 = require("@angular/common/http");
 var home_component_1 = require("./home/home.component"); /*Resquisições em Ajax*/
 var router_1 = require("@angular/router");
 var login_component_1 = require("./login/login.component");
-var headr_module_1 = require("./components/headr/headr.module");
-var header_interceptor_service_1 = require("./service/header-interceptor.service");
+var userComponent_component_1 = require("./components/userComponent/userComponent.component");
 exports.appRouters = [
     {
         /*quando passar a url  http://localhost:4200/home ele vai chamar o componet HomeComponent*/
-        path: 'home', component: home_component_1.HomeComponent
+        path: 'home',
+        component: home_component_1.HomeComponent
     },
     {
         /*quando passar a url  http://localhost:4200/login ele vai chamar o componet LoginComponent*/
-        path: 'login', component: login_component_1.LoginComponent
+        path: 'login',
+        component: login_component_1.LoginComponent
     },
     {
         /*quando passar a url  http://localhost:4200/ "raiz" ele vai chamar o componet LoginComponent*/
-        path: '', component: login_component_1.LoginComponent
-    }
+        path: '',
+        component: login_component_1.LoginComponent
+    },
+    {
+        /*quando passar a url  http://localhost:4200/ "raiz" ele vai chamar o componet LoginComponent*/
+        path: 'userlist',
+        component: userComponent_component_1.UserComponentComponent
+    },
 ];
 /*exportando o modulo ModuleWithProviders<type-argument> para que ele possa ler o array de rotas acima */
 exports.routes = router_1.RouterModule.forRoot(exports.appRouters);
@@ -42,15 +49,9 @@ var AppModule = /** @class */ (function () {
                 app_component_1.AppComponent,
                 home_component_1.HomeComponent,
                 login_component_1.LoginComponent,
+                userComponent_component_1.UserComponentComponent,
             ],
-            imports: [
-                platform_browser_1.BrowserModule,
-                forms_1.FormsModule,
-                http_1.HttpClientModule,
-                headr_module_1.HeadrModule,
-                exports.routes,
-                header_interceptor_service_1.HttpInterceptorModule,
-            ],
+            imports: [platform_browser_1.BrowserModule, forms_1.FormsModule, http_1.HttpClientModule, exports.routes],
             providers: [],
             bootstrap: [app_component_1.AppComponent]
         })

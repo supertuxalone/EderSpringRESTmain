@@ -561,6 +561,110 @@
 				CREATE src/app/service/user-service.service.spec.ts (383 bytes)
 				CREATE src/app/service/user-service.service.ts (140 bytes)
 				
-	
-						
+					atualizar  UserServiceService
+						export class UserServiceService {
+						  constructor(private http: HttpClient) {}
+
+						  getStudentList(): Observable<any> {
+							return this.http.get<any>(AppConstants.baseUrl);
+						  }
+						}
+
+
+
+13 - ]
+	criando Class Model e Service do Usuário
+			-  criar pasta Model
+			
+			executar na pasta 
+			#ng g interface User /*pode ser ser como class tbm*/
+				CREATE src/app/model/user.spec.ts (146 bytes)
+				CREATE src/app/model/user.ts (22 bytes)
+
+			13.1 - ]
+				atualizar	
+					/*atributos que estão no back-end e atraves dessa interface o angular vai enterder e imprimir na tela para o usuario */
+
+					export interface User {
+					  id: Number | any;
+					  login: String | any;
+					  senha: String;
+					  nome: String | any;
+					  cpf: String | undefined;
+					  dataNascimento: String | undefined;
+					  // profissao: Profissao = new Profissao();
+					  // telefones: Array<Telefone>;
+					  // salario: DoubleRange;
+					}
+
+			13.2 - ]
+				criar o component UserComponentComponent
+					atualizar
+						export class UserComponentComponent implements OnInit {
+							/*a classe Observable vai interpretar e receber a interface User com seus atribuidos, vindo do html */
+						  students: Observable<User[]> | any;
+
+						  /*declaração de userservice */
+						  constructor(private userServiceService: UserServiceService) {}
+
+						  ngOnInit() {
+							/*carregando os usuarios e joga o resultado na variavel students */
+							this.userServiceService.getStudentList().subscribe((data) => {
+							  this.students = data;
+							});
+						  }
+							
+			13.3 - ] 
+				criar o html da tela com os dados do usuario
+					<table>
+					  <thead>
+						<tr>
+						  <th>Id:</th>
+						  <th>Login: </th>
+						  <th>Senha: </th>
+						  <th>Nome: </th>
+						  <th>CPF: </th>
+						  <th>dataNascimento:</th>
+						</tr>
+					  </thead>
+
+					  <tbody>
+					  // PARA CADA JSON ELE VAI JOGAR NA VARIAVEL student 
+						<tr *ngFor="let student of students">
+						  <td>{{student.id}}</td>
+						  <td>{{student.login}}</td>
+						  <td>{{student.senha}}</td>
+						  <td>{{student.nome}}</td>
+						  <td>{{student.cpf}}</td>
+						  <td>{{student.dataNascimento}}</td>
+						</tr>
+					  </tbody>
+					</table>
 					
+			13.4 - ]
+				criar o path para que quando for passado o endpoint a tela html acima passo ser 
+				direcionada 
+					em app.module.ts	
+					import { UserComponentComponent } from './components/userComponent/userComponent.component';
+					...
+					
+						{
+							/*quando passar a url  http://localhost:4200/ "raiz" ele vai chamar o componet LoginComponent*/
+							path: 'userlist',
+							component: UserComponentComponent,
+						  },
+
+
+			/*TESTE UNITÁRIO*/
+				- logar normalmento com usuario : admin e senha 1234
+				- e acessar o link Acrion > Users
+				
+				Resultado:
+					Id:	Login:	Senha:	Nome:	CPF:	dataNascimento:
+				
+						/*SEM OS DADOS AINDA*/
+
+
+/*https://projetojavaweb.com/certificado-aluno/plataforma-curso/aulaatual/1208d388-817c-49b1-bdbf-af2d5ab68f93/idcurso/1/idvideoaula/812*/
+						
+						
